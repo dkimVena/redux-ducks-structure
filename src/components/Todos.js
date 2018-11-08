@@ -29,9 +29,9 @@ const Todos = ({ todos, input, onInsert, onToggle, onRemove, onChange }) => {
   });
   return (
     <div>
-      <h2>오늘 할 일</h2>
+      <h2>Today Todos</h2>
       <input value={input} onChange={onChange} />
-      <button onClick={onInsert}>추가</button>
+      <button onClick={onInsert}>Add</button>
       <ul>{todoItems}</ul>
     </div>
   );
@@ -41,12 +41,12 @@ Todos.defaultProps = {
   todos: List([
     Map({
       id: 0,
-      text: '걷기',
+      text: 'Walking',
       checked: false
     }),
     Map({
       id: 1,
-      text: '코딩하기',
+      text: 'Coding',
       checked: true
     })
   ]),
